@@ -13,7 +13,14 @@ class Spaceship {
       this.docked = false;
     }
     this.phasersCharge = 'uncharged';
-
+    this.informCrew();
+}
+    informCrew(){
+      
+      this.crew.forEach(crewMember => {
+      crewMember.currentShip = this;
+    });
+  
   }
 }
-  end
+  
